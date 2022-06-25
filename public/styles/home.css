@@ -1,0 +1,77 @@
+body{
+    background: #093545;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    left: 65vw;
+    top: 29vh;
+}
+
+.forms h1{
+    font-family: 'Lexend Deca', sans-serif;;
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 80px;
+text-align: center;
+color: #FFFFFF;
+margin: 0;
+}
+
+.forms h4{
+    font-family: 'Lexend Deca',  sans-serif;
+font-style: normal;
+font-weight: 200;
+font-size: 16px;
+line-height: 20px;
+margin: 0;
+text-align: center;
+color: #FFFFFF;
+}
+
+
+
+.inputText {
+    background: #224957;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 21px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.inputText::placeholder{
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.btnBook {
+    background: #033EB0;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 30%);
+    border-radius: 5px;
+    border: none;
+    padding: 6px 21px;
+    margin: 10px 5px;
+    height: 5vh;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+
+

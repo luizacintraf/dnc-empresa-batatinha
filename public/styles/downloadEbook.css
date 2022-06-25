@@ -1,0 +1,40 @@
+html{
+    width: 100%;
+    height: 100%; 
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#bookImage {
+    background: url(/public/images/book.svg);
+    background-position: center;
+    background-size: 144%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    margin: 56px 0px 0px 90px;
+}
+
+.divRight{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.divRight *{
+    margin: 7px 0px;
+    width: 100%;
+}
+
