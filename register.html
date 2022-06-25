@@ -1,134 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro de usuário</title>
-    <link rel="stylesheet" href="public/styles/main.css"/>
-    <link rel="stylesheet" href="public/styles/register.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="js/register.js"></script>
-  </head>
-  <body>
-    <img id="vectorsImage" src="public/images/Vectors2.png" />
-    <div id="loginPane">
-      <div id="loginDiv">
-        <h2>Já possui conta?</h2>
-        <p>Para se manter conectado, entre com sua conta</p>
-        <button class="btnPrimary" onclick="location.href='/login.html'">Faça login</button>
-      </div>
-    </div>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de usuário</title>
+  <link rel="stylesheet" href="public/styles/main.css" />
+  <link rel="stylesheet" href="public/styles/register.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/d72dcb7a1d.js" crossorigin="anonymous"></script>
+  <script src="js/register.js" type="module"></script>
+</head>
+
+<body>
+
+  <main>
     <form id="register" method="POST">
-      <h1>Crie sua conta</h1>
+      <h2>Crie sua conta</h2>
       <div>
-        <img src="public/images/akar-icons_google-contained-fill.png" />
-        <img src="public/images/entypo-social_facebook-with-circle.png" />
-        <img src="public/images/entypo-social_linkedin-with-circle.png" />
+        <img src="public/images/google.svg" />
+        <img src="public/images/facebook.svg" />
+        <img src="public/images/linkedin.svg" />
       </div>
       <p>Ou use um e-mail para se registrar</p>
       <div class="gridForms">
-        <input
-          class="inputRegister"
-          type="text"
-          id="nome"
-          name="nome"
-          placeholder="Nome"
-        />
+        <input type="text" id="nome" name="nome" placeholder="Nome" />
         <div>
-          <input
-            class="inputRegister"
-            type="password"
-            id="senha"
-            name="senha"
-            placeholder="Senha"
-          />
-          <span
-            class="fa fa-fw fa-eye  toggle-password"
-            onclick="tooglePassword('senha')"
-          ></span>
+          <input type="password" id="senha" name="senha" placeholder="Senha" />
+          <span class="fa fa-fw fa-eye toggle-password" onclick="tooglePassword('senha')"></span>
         </div>
-        <input
-          class="inputRegister"
-          type="text"
-          id="sobrenome"
-          name="sobrenome"
-          placeholder="Sobrenome"
-        />
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" />
         <div>
-          <input
-            class="inputRegister"
-            type="password"
-            id="confirmar_senha"
-            name="senha"
-            placeholder="Confirmar senha"
-          />
-          <span
-            class="fa fa-fw fa-eye toggle-password"
-            onclick="tooglePassword('confirmar_senha')"
-          ></span>
+          <input type="password" id="confirmar_senha" name="senha"placeholder="Confirmar senha" />
+          <span class="fa fa-fw fa-eye toggle-password" onclick="tooglePassword('confirmar_senha')"></span>
         </div>
-        <input
-          class="inputRegister"
-          type="email"
-          id="mail"
-          name="email"
-          placeholder="E-mail"
-        />
-        <input
-          class="inputRegister"
-          type="text"
-          id="address"
-          name="address"
-          placeholder="Endereço"
-        />
-        <input
-          class="inputRegister"
-          type="tel"
-          id="tel"
-          name="tel"
-          placeholder="telefone (com DDD)"
-        />
+        <input  type="email" id="mail" name="email" placeholder="E-mail" />
+        <input type="text" id="address" name="address" placeholder="Endereço" />
+        <input type="tel" id="tel" name="tel" placeholder="telefone (com DDD)" />
 
-        <input
-          class="inputRegister"
-          type="text"
-          id="cep"
-          name="cep"
-          placeholder="CEP"
-        />
+        <input type="text" id="cep" name="cep" placeholder="CEP" />
       </div>
-      <input class="btnSecondary" type="submit" value="Criar conta" />
+      <button class="btnPrimary" type="submit">Criar conta </button>
     </form>
-    <div id="elipses">
-      <div id="elipse1">
-        <div id="elipse2">
-          <div id="elipse3">e3</div>
-        </div>
-      </div>
-    </div>
-  </body>
-  <script>
-      const tooglePassword = (id) => {
-        
-    event.srcElement.classList.toggle("fa-eye-slash")
+    <div >
+      <button id="elipses"><img src="public/images/darkmode.svg" alt="" srcset="" /></button>
+    </body>
+    <div class="vectorsImage"></div>
+  </div>
+  </main>
 
-   if(document.getElementById(id).type == "password")
-   document.getElementById(id).type= "text"
-   else{
-    document.getElementById(id).type= "password"
-   }
-}
-  </script>
+  <div id="sidebar">
+    <div id="loginDiv">
+      <h3>Já possui conta?</h3>
+      <p>Para se manter conectado, entre com sua conta</p>
+      <button class="btnSecondary" onclick="location.href='/login.html'">
+        Faça login
+      </button>
+    </div>
+  </div>
+
+
+
+<script>
+    const tooglePassword = (id) => {
+        event.srcElement.classList.toggle("fa-eye-slash");
+
+        if (document.getElementById(id).type == "password")
+            document.getElementById(id).type = "text";
+        else {
+            document.getElementById(id).type = "password";
+        }
+    };
+</script>
+
 </html>

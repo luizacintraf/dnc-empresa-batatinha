@@ -1,12 +1,7 @@
-label,
-a {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  color: #093545;
+body {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 100%;
 }
 
 .toggle-password {
@@ -18,38 +13,41 @@ a {
   margin-top: 2.5vh;
 }
 
-.inputRegister {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  background: #224957;
-  border-radius: 10px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #ffffff;
-  height: 5vh;
-  border: none;
-  padding: 5px 20px;
-  width: 25vw;
-  margin: 5px;
+#sidebar {
+  height: 100%;
+  background: #20df7f;
 }
 
-.inputRegister::placeholder {
-  color: #ffffff;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+#loginDiv {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50%;
 }
 
-.inputRegister:hover {
-    background: rgba(34, 73, 87, 0.6);
-    border-radius: 10px;
-  }
-  
+#loginDiv * {
+  margin: 18px 0px;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
+#register{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+#register > :not(.gridForms) {
+  margin: 18px 0px;
+}
 
 .gridForms {
   display: flex;
@@ -57,46 +55,14 @@ a {
   justify-content: center;
 }
 
-#loginPane {
-  position: absolute;
-  width: 35%;
-  height: 100%;
-  right: 0px;
-  top: 0px;
-  background: #20df7f;
+input {
+  width: 350px;
 }
 
-#loginDiv {
-  position: relative;
-  margin: 50% 15%;
-  text-align: center;
-}
-
-#register,
-#loginForms {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 65vw;
-  margin: 2% 0px;
-  justify-content: space-around;
-}
-
-#loginForms {
-  margin: auto;
-  margin-top: 13vh;
+.vectorsImage{
+  margin-top: 5%;
 }
 
 #register img {
   margin: 0px 1vw;
 }
-
-#loginTools {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 28vw;
-  margin-top: 2vh;
-}
-

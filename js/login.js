@@ -1,4 +1,10 @@
+import changeMode from './darkMode.js'
+
 window.addEventListener('load',()=>{
+
+    var elipses = document.getElementById("elipses")
+    elipses.addEventListener('click', ()=>{changeMode()});
+
     document.getElementById("loginForms").addEventListener('submit', ()=>{
         event.preventDefault();
         const body = {
@@ -20,7 +26,7 @@ window.addEventListener('load',()=>{
                     }else{
                         sessionStorage.setItem('user',JSON.stringify(res))
                     }
-                    location.href="/user-page.html"; 
+                    location.href="/userPage.html"; 
                     return false
                         
                 })

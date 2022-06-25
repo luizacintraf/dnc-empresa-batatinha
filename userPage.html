@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="public/styles/main.css"/>
+    <link rel="stylesheet" href="public/styles/userPage.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d72dcb7a1d.js" crossorigin="anonymous"></script>
+    <script src="js/userPage.js" type="module"></script>
+
+  </head>
+
+  <body>
+    <header>
+      <div style="flex-grow: 1; text-align:center;">
+        <button id="elipses"><img  src="public/images/darkmode.svg" alt="" srcset="" /></button>
+      </div>
+      
+      <form id="searchBar">
+        <input
+          type="text"
+          placeholder="O que você está procurando?"
+          name="search"
+        />
+        <button id="btnSearch">
+          <i style="width: 24px" class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div id="icons">
+        <i class="fa-solid fa-user" id="user"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </header>
+    <main>
+      <div id="middleDiv">
+      <h2>Bem Vindo,<span id="personName">Pessoa</span></h2>
+      <div id="boxCenter">
+        <img src="public/images/material-symbols_emergency-home.png" />
+        <p>
+          Teremos uma palestra em <span id="city">São José dos Campos</span> no
+          dia <span id="data">26 de Agosto</span>.
+        </p>
+        <p>
+          <span>Aproveite agora essa oportunidade</span> e adquira já seu
+          ingresso.
+        </p>
+      </div>
+      <button class="btnPrimary">Adquirir Ingressos</button>
+      <a href="">Continuar para o site</a>
+    </div>
+    </main>
+    <footer>
+      <div class="vectorsImage"></div>
+    </footer>
+  </body>
+
+</html>

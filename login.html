@@ -1,64 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="public/styles/main.css"/>
-    <link rel="stylesheet" href="public/styles/register.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="js/login.js"></script>
-  </head>
-  <body>
-    <img id="vectorsImage" src="public/images/Vectors2.png" />
-        <form  id="loginForms">
-          <h2>Entre</h2>
-          <p>Encontre agora sua solução</p>
-          <input class="inputRegister" type="email" id="email" placeholder="Email">
-          <input class="inputRegister" type="password" id="password" placeholder="Senha">
-          <div id="loginTools">
-            <div>
-            <input type="checkbox" name="remember" id="check">
-            <label for="remember">Lembre-me </label>
-          </div>
 
-          <a href="">Esqueceu sua senha?</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="public/styles/main.css" />
+  <link rel="stylesheet" href="public/styles/login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Montserrat:wght@200;400;500&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d72dcb7a1d.js" crossorigin="anonymous"></script>
+  <script src="js/login.js" type="module"></script>
+</head>
 
-          </div>
-          
-          <input class="btnSecondary" type="submit" value="Login">
+<body>
 
-        </form>
-        <div id="elipses">
-          <div id="elipse1">
-            <div id="elipse2">
-              <div id="elipse3">e3</div>
-            </div>
-          </div>
-        </div>
-  </body>
-  <script>
-      const tooglePassword = (id) => {
-        
-    event.srcElement.classList.toggle("fa-eye-slash")
 
-   if(document.getElementById(id).type == "password")
-   document.getElementById(id).type= "text"
-   else{
-    document.getElementById(id).type= "password"
-   }
-}
-  </script>
+  <form id="loginForms">
+    <h2>Entre</h2>
+    <p>Encontre agora sua solução</p>
+    <input class="inputRegister" type="email" id="email" placeholder="Email">
+    <input class="inputRegister" type="password" id="password" placeholder="Senha">
+    <div id="loginTools">
+      <div>
+        <input type="checkbox" name="remember" id="check">
+        <label for="remember">Lembre-me </label>
+      </div>
+
+      <a href="">Esqueceu sua senha?</a>
+
+    </div>
+
+    <input class="btnPrimary" type="submit" value="Login">
+
+  </form>
+  <footer>
+    <button id="elipses"><img src="public/images/darkmode.svg" alt="" srcset="" /></button>
+    <div class="vectorsImage"></div>
+  </footer>
+
+</body>
+
 </html>

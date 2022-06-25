@@ -2,18 +2,25 @@ const fs = require("fs");
 module.exports = {
   storeClient: (req, res) => {
     const { email, tel } = req.body;
+    console.log(req.body)
     try {
       var emailsRegistered = fs.readFileSync("database/register_email.json");
 
       emailsRegistered = JSON.parse(emailsRegistered);
 
-      emailsRegistered.push({ email: email, tel: tel });
+      if(emailsRegistered.find(el => el.email == email)){
+        return res.status(200).send("Cliente já cadastrado!");
+      }else{
 
-      emailsRegistered = JSON.stringify(emailsRegistered);
+        emailsRegistered.push({ email: email, tel: tel });
 
-      fs.writeFileSync("database/register_email.json", emailsRegistered);
+        emailsRegistered = JSON.stringify(emailsRegistered);
 
-      return res.status(200).send("Registro salvo!");
+        fs.writeFileSync("database/register_email.json", emailsRegistered);
+      
+        return res.status(200).send("Registro salvo!");
+      }
+
     } catch (e) {
 
       return res.status(400).send(e);
@@ -57,7 +64,7 @@ module.exports = {
   },
   login: (req, res) => {
     const { email, password } = req.body;
-    // try {
+    try {
       var clients = fs.readFileSync("database/clients.json");
       clients = JSON.parse(clients);
 
@@ -68,8 +75,8 @@ module.exports = {
           console.log("teste")
           return res.status(400).json({error:"Usuário/senha incorretos"});
       }
-    // } catch (e) {
-    //   return res.sendStatus(400).send(e);
-    // }
+    } catch (e) {
+      return res.sendStatus(400).send(e);
+    }
   }
 };
